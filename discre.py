@@ -36,6 +36,8 @@ def _mid(p1,p2,o=0.10):
     (x1,y1),(x2,y2)=p1,p2; mx,my=(x1+x2)/2,(y1+y2)/2; dx,dy=x2-x1,y2-y1; nx_,ny_=-dy,dx; L=(nx_**2+ny_**2)**0.5 or 1
     return mx+o*nx_/L, my+o*ny_/L
 
+# Continuando...
+
 def draw_step(current, idx, sym=None):
     plt.clf(); nodes=list(G.nodes())
     nx.draw_networkx_nodes(G,pos,nodelist=nodes,node_size=[900 if n==current else 600 for n in nodes],linewidths=[3 if n in F else 1 for n in nodes],edgecolors="black")
